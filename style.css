@@ -122,9 +122,21 @@ table{
   #leftclicker, #leftclicker1{
       margin-left: 2%;
       margin-right: 93%;
+      /* padding: 15px 25px; */
+       /* font-size: 24px; */
+       cursor: pointer;
+       color: #fff;
+       background-color: #999;
+       border-radius: 15px;
+       border: white 1px solid;
   }
 
   #rightclicker, #rightclicker1{
       right: 0px;
-
+      cursor: pointer;
+       color: #fff;
+       background-color: #999;
+       border: white 1px solid;
+       border-radius: 15px;
   }
+
