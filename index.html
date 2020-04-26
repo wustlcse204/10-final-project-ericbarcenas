@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body> 
+
+    <header>
+        <p class = "title">Easy Yelp</p>
+    </header>
+
+    <div class="inputBody">
+      <label id="label1">Find</label>
+
+      <select id="types" class="dropdown">
+        <option value="restaurants">Restaurants</option>
+        <option value="social_clubs">Social Clubs</option>
+        <option value="tours">Tours</option>
+        <option value="hospitals">Hospitals</option>
+        <option value="grocery">Grocery Stores</option>
+        <option value="gyms">Gyms</option>
+      </select>
+
+      <label>Near</label>
+      <input type="text" id="inputItem" placeholder="Enter City Name"/>
+      <button type="submit" class="submitButton" onClick="showEvents()">Submit</button>
+    </div>
+
+
+    <div class ="resultsBody" id="myMainBody">
+      <div class="slideBody">
+        <div class="leftSide">
+          <button class="prev" id="leftclicker" onclick="nextPage(-1)">&#10094;</button>
+          <button class="next" id="rightclicker" onclick="nextPage(1)">&#10095;</button>
+        </div>
+
+        <div class="slideshow-container">
+          <div class="myPages">
+            <table>
+              <tr>
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result1">
+                      <div class="frontSide">
+                        <p id="name0"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140" width="auto" id = "image0"/>
+                        </div>
+                      </div>
+
+                      <div class="backSide">
+                        <p id="number0"> </p>
+                        <p id="rating0">   </p>
+                        <p id="price0"></p>
+                        <p id="address0"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result2">
+                      <div class="frontSide">
+                        <p id="name1"> </p>
+                        <div class="images">
+                          <img src= "" alt=""height="140" width="auto" id = "image1"/>
+                        </div>
+                      </div>
+                      
+                      <div class="backSide">
+                        <p id= "number1"> </p>
+                        <p id="rating1">   </p>
+                        <p id="price1"></p>
+                        <p id="address1"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result3">
+                      <div class="frontSide">
+                         <p id="name2"> </p>
+                         <div class="images">
+                           <img src= "" alt="" height=" 140" width="auto" id = "image2"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number2"> </p>
+                          <p id="rating2">   </p>
+                          <p id="price2"></p>
+                          <p id="address2"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result4">
+                        <div class="frontSide">
+                          <p id="name3"> </p>
+                          <div class="images">
+                            <img src= "" alt=""height=" 140" width="auto" id = "image3"/>
+                          </div>
+                        </div>
+
+                        <div class="backSide">
+                          <p id="number3"> </p>
+                          <p id="rating3">   </p>
+                           <p id="price3"></p>
+                           <p id="address3"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+              </tr>
+                  
+              <tr>
+                    
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result5">
+                        <div class="frontSide">
+                          <p id="name4"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image4"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number4"> </p>
+                          <p id="rating4">   </p>
+                           <p id="price4"></p>
+                           <p id="address4"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+
+
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result6">
+                          <div class="frontSide">
+                             <p id="name5"> </p>
+                             <div class="images">
+                               <img src= "" alt="" height="140" width="auto" id = "image5"/>
+                              </div>
+                            </div>
+
+                            <div class="backSide">
+                              <p id="number5"> </p>
+                              <p id="rating5">   </p>
+                              <p id="price5"></p>
+                              <p id="address5"> </p>
+                            </div>
+                          </div>
+                      </div>
+                    </th>
+
+
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result7">
+                          <div class="frontSide">
+                            <p id="name6"> </p>
+                            <div class="images">
+                              <img src= "" alt="" height="140" width="auto" id = "image6"/>
+                            </div>
+                          </div>
+                          
+                          <div class="backSide">
+                            <p id="number6"> </p>
+                            <p id="rating6">   </p>
+                            <p id="price6"></p>
+                            <p id="address6"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result8">
+                          <div class="frontSide">
+                            <p id="name7"> </p>
+                            <div class="images">
+                              <img src= "" alt="" height="140" width="auto" id = "image7"/>
+                            </div>
+                          </div>
+                          
+                          <div class="backSide">
+                            <p id="number7"> </p>
+                            <p id="rating7">   </p>
+                            <p id="price7"></p>
+                            <p id="address7"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                </tr>
+                
+                
+                <tr>
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result9">
+                        <div class="frontSide">
+                          <p id="name8"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image8"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number8"> </p>
+                          <p id="rating8">   </p>
+                          <p id="price8"></p>
+                          <p id="address8"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result10">
+                        <div class="frontSide">
+                          <p id="name9"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image9"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number9"> </p>
+                          <p id="rating9">   </p>
+                          <p id="price9"></p>
+                          <p id="address9"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result11">
+                        <div class="frontSide">
+                          <p id="name10"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image10"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number10"> </p>
+                          <p id="rating10">   </p>
+                          <p id="price10"></p>
+                          <p id="address10"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result12">
+                        <div class="frontSide">
+                          <p id="name11"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image11"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number11"> </p>
+                          <p id="rating11">   </p>
+                          <p id="price11"></p>
+                          <p id="address11"> </p>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    </th>
+                </tr>
+                
+                <tr>
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result13">
+                        <div class="frontSide">
+                          <p id="name12"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image12"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number12"> </p>
+                          <p id="rating12">   </p>
+                          <p id="price12"></p>
+                          <p id="address12"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result14">
+                        <div class="frontSide">
+                          <p id="name13"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image13"/>
+                          </div>
+                        </div>
+                      <div class="backSide">
+                        <p id="number13"> </p>
+                        <p id="rating13">   </p>
+                        <p id="price13"></p>
+                        <p id="address13"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result15">
+                      <div class="frontSide">
+                        <p id="name14"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140" width="auto" id = "image14"/>
+                        </div>
+                      </div>
+                      <div class="backSide">
+                        <p id="number14"> </p>
+                        <p id="rating14">   </p>
+                        <p id="price14"></p>
+                        <p id="address14"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result16">
+                      <div class="frontSide">
+                        <p id="name15"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140 " width="auto" max-width="" id = "image15"/>
+                        </div>
+                      </div>
+                      <div class="backSide">
+                        <p id="number15"> </p>
+                        <p id="rating15">   </p>
+                        <p id="price15"></p>
+                        <p id="address15"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                
+              </tr>
+            </table>
+          </div>
+          
+          <div class="myPages">
+
+
+
+            <table>
+              <tr>
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result17">
+                      <div class="frontSide">
+                        <p id="name16"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140" width="auto" id = "image16"/>
+                        </div>
+                      </div>
+
+                      <div class="backSide">
+                        <p id="number16"> </p>
+                        <p id="rating16">   </p>
+                        <p id="price16"></p>
+                        <p id="address16"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result18">
+                      <div class="frontSide">
+                        <p id="name17"> </p>
+                        <div class="images">
+                          <img src= "" alt=""height="140" width="auto" id = "image17"/>
+                        </div>
+                      </div>
+                      
+                      <div class="backSide">
+                        <p id= "number17"> </p>
+                        <p id="rating17">   </p>
+                        <p id="price17"></p>
+                        <p id="address17"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result19">
+                      <div class="frontSide">
+                         <p id="name18"> </p>
+                         <div class="images">
+                           <img src= "" alt="" height=" 140" width="auto" id = "image18"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number18"> </p>
+                          <p id="rating18">   </p>
+                          <p id="price18"></p>
+                          <p id="address18"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result20">
+                        <div class="frontSide">
+                          <p id="name19"> </p>
+                          <div class="images">
+                            <img src= "" alt=""height=" 140" width="auto" id = "image19"/>
+                          </div>
+                        </div>
+
+                        <div class="backSide">
+                          <p id="number19"> </p>
+                          <p id="rating19">   </p>
+                           <p id="price19"></p>
+                           <p id="address19"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+              </tr>
+                  
+              <tr>
+                    
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result21">
+                        <div class="frontSide">
+                          <p id="name20"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image20"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number20"> </p>
+                          <p id="rating20">   </p>
+                           <p id="price20"></p>
+                           <p id="address20"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+
+
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result22">
+                          <div class="frontSide">
+                             <p id="name21"> </p>
+                             <div class="images">
+                               <img src= "" alt="" height="140" width="auto" id = "image21"/>
+                              </div>
+                            </div>
+
+                            <div class="backSide">
+                              <p id="number21"> </p>
+                              <p id="rating21">   </p>
+                              <p id="price21"></p>
+                              <p id="address21"> </p>
+                            </div>
+                          </div>
+                      </div>
+                    </th>
+
+
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result23">
+                          <div class="frontSide">
+                            <p id="name22"> </p>
+                            <div class="images">
+                              <img src= "" alt="" height="140" width="auto" id = "image22"/>
+                            </div>
+                          </div>
+                          
+                          <div class="backSide">
+                            <p id="number22"> </p>
+                            <p id="rating22">   </p>
+                            <p id="price22"></p>
+                            <p id="address22"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                    
+                    <th>
+                      <div class = "tenResults">
+                        <div class = eachResult id= "result24">
+                          <div class="frontSide">
+                            <p id="name23"> </p>
+                            <div class="images">
+                              <img src= "" alt="" height="140" width="auto" id = "image23"/>
+                            </div>
+                          </div>
+                          
+                          <div class="backSide">
+                            <p id="number23"> </p>
+                            <p id="rating23">   </p>
+                            <p id="price23"></p>
+                            <p id="address23"> </p>
+                          </div>
+                        </div>
+                      </div>
+                    </th>
+                </tr>
+                
+                
+                <tr>
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result25">
+                        <div class="frontSide">
+                          <p id="name24"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image24"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number24"> </p>
+                          <p id="rating24">   </p>
+                          <p id="price24"></p>
+                          <p id="address24"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result26">
+                        <div class="frontSide">
+                          <p id="name25"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image25"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number25"> </p>
+                          <p id="rating25">   </p>
+                          <p id="price25"></p>
+                          <p id="address25"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result27">
+                        <div class="frontSide">
+                          <p id="name26"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image26"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number26"> </p>
+                          <p id="rating26">   </p>
+                          <p id="price26"></p>
+                          <p id="address26"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result28">
+                        <div class="frontSide">
+                          <p id="name27"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image27"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number27"> </p>
+                          <p id="rating27">   </p>
+                          <p id="price27"></p>
+                          <p id="address27"> </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    </th>
+                </tr>
+                
+
+                <tr>
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result29">
+                        <div class="frontSide">
+                          <p id="name28"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image28"/>
+                          </div>
+                        </div>
+                        <div class="backSide">
+                          <p id="number28"> </p>
+                          <p id="rating28">   </p>
+                          <p id="price28"></p>
+                          <p id="address28"> </p>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  
+                  <th>
+                    <div class = "tenResults">
+                      <div class = eachResult id= "result30">
+                        <div class="frontSide">
+                          <p id="name29"> </p>
+                          <div class="images">
+                            <img src= "" alt="" height="140" width="auto" id = "image29"/>
+                          </div>
+                        </div>
+                      <div class="backSide">
+                        <p id="number29"> </p>
+                        <p id="rating29">   </p>
+                        <p id="price29"></p>
+                        <p id="address29"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result31">
+                      <div class="frontSide">
+                        <p id="name30"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140" width="auto" id = "image30"/>
+                        </div>
+                      </div>
+                      <div class="backSide">
+                        <p id="number30"> </p>
+                        <p id="rating30">   </p>
+                        <p id="price30"></p>
+                        <p id="address30"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th>
+                  <div class = "tenResults">
+                    <div class = eachResult id= "result32">
+                      <div class="frontSide">
+                        <p id="name31"> </p>
+                        <div class="images">
+                          <img src= "" alt="" height="140 "width="auto" id = "image31"/>
+                        </div>
+                      </div>
+                      <div class="backSide">
+                        <p id="number31"> </p>
+                        <p id="rating31">   </p>
+                        <p id="price31"></p>
+                        <p id="address31"> </p>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+
+        <div class="leftSide">
+          <button class="prev" id="leftclicker1" onclick="nextPage(-1)">&#10094;</button>
+          <button class="next" id="rightclicker1" onclick="nextPage(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script>
+
+      function showEvents(){
+        var locationSearch = document.getElementById("inputItem").value
+        var typeSearch = document.getElementById("types").value
+        console.log(locationSearch);
+        console.log(typeSearch);
+ 
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var todos = JSON.parse(this.responseText);
+          console.log(todos);
+          for(var i=0; i<32; i++){
+            var nameValue = "name" + i
+            var imageValue = "image" + i
+            var numberValue = "number" + i
+            var ratingValue = "rating" + i
+            var addressValue = "address" + i
+            var priceValue = "price" + i
+            // console.log(todos.businesses[i].name)
+            // todos.businesses[i].name = document.getElementById(nameValue).innerHTML;
+            document.getElementById(nameValue).innerHTML = todos.businesses[i].name;
+            document.getElementById(imageValue).src = todos.businesses[i].image_url;
+            document.getElementById(numberValue).innerHTML = todos.businesses[i].phone;
+            // document.getElementById(ratingValue).insertAdjacentText("beforeend", todos.businesses[i].rating + "/5");
+            document.getElementById(ratingValue).innerHTML = "Rating: " + todos.businesses[i].rating + "/5";
+            if(typeSearch == "restaurants"){
+              document.getElementById(priceValue).innerHTML = "Cuisine Type: " + todos.businesses[i].categories[0].title;
+            }else{
+              document.getElementById(priceValue).innerHTML = "";
+            }
+            document.getElementById(addressValue).innerHTML = "Address: " + todos.businesses[i].location.display_address;
+          }
+        }
+        }
+        xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?location=" + locationSearch + "&term=" + typeSearch + "&limit=32", true);
+        xhttp.setRequestHeader("Authorization","Bearer 1kirVQNJf1tgm7PEq_BPw6uNfPmif_3w8SllPAKwMkIvVttouoQ19DQbiT_e0Lb-qLeZ55n3narpUD0ck3NuO1FNlzKZGnUn1cBtSPJSr9f6QMrfjsDrQTSgEWmkXnYx");
+        // xhttp.setRequestHeader("Cookie", "__cfduid=d92ce71e29df114f8d5ff9faf9f334e291587790539");
+        xhttp.send();
+
+       }
+       
+
+       function currentPage(index) {
+            var currentSlides = document.getElementsByClassName("myPages");
+            if (index > currentSlides.length) {pageNumber = 1}   
+            if (index < 1) {pageNumber = currentSlides.length}
+            for (var i = 0; i < currentSlides.length; i++) {
+              currentSlides[i].style.display = "none";
+              }
+              currentSlides[pageNumber-1].style.display = "block";
+              }
+       
+       
+       var pageNumber = 1;
+       currentPage(pageNumber);
+       
+       function nextPage(index) {
+         currentPage(pageNumber += index);
+        }
+        
+        function currentSlide(index) {
+          currentPage(pageNumber = index);
+          }
+          
+          
+
+    </script>
+  </body>
+</html>
+
+
+
+
+

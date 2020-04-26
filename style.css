@@ -1,0 +1,130 @@
+body{
+    border: rgb(171, 36, 36) 10px solid;
+}
+header{
+    border: rgb(171, 36, 36) solid 1px ;
+    background-color: rgb(171, 36, 36);
+    margin-bottom: 20px;
+}
+
+.title{
+    text-align: center;
+    font-size: 38px;
+    font-family: myTitleFont;
+}
+
+@font-face{
+    font-family: myTitleFont;
+    src: url(BeautyMountainsPersonalUse-od7z.ttf);
+}
+
+.inputBody{
+    display: inline;
+    /* border: black 10px solid; */
+    margin-left: 35%;
+    font-size: 20px;
+}
+
+#inputItem, .submitButton{
+    padding: 10px 10px 10px 10px;
+}
+.dropdown{
+    height: 38px;
+    padding: 10px 10px 10px 10px;
+}
+
+.submitButton{
+    background-color: rgb(171, 36, 36);
+}
+.tenResults{
+    margin-top: 20px;
+    background-color: rgb(171, 36, 36);
+}
+
+
+table{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.resultsBody{
+    background-color: rgb(171, 36, 36);
+    margin-top: 20px;
+    display: block;
+}
+.tenResults {
+    width: 320px;
+    height: 200px;
+    /* perspective: 3000px; */
+  }
+  
+  .eachResult {
+    position: relative;
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+  }
+  
+  .tenResults:hover .eachResult {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide, .backSide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .frontSide {
+    background-color: white;
+    color: black;
+  }
+  
+  .backSide {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  .images{
+      margin-left: 42px;
+      left: 20px;
+      width: 200px;
+      height: 110px;
+      
+
+      /* border: rgb(171, 36, 36) solid 1px ; */
+  }
+
+  img{
+      max-width: 100%;
+      border: rgb(171, 36, 36) solid 3px 
+      
+  }
+
+
+  .leftSide{
+    /* border: black solid 3px; */
+    padding-top: 20px;
+    width: 100%;
+    height: 100;
+
+  }
+
+  .slideBody{
+      display: inline;
+  }
+
+  #leftclicker, #leftclicker1{
+      margin-left: 2%;
+      margin-right: 93%;
+  }
+
+  #rightclicker, #rightclicker1{
+      right: 0px;
+
+  }
