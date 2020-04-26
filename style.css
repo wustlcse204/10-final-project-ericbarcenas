@@ -9,7 +9,8 @@ header{
 
 .title{
     text-align: center;
-    font-size: 38px;
+    font-size: 50px;
+    
     font-family: myTitleFont;
 }
 
@@ -35,6 +36,11 @@ header{
 
 .submitButton{
     background-color: rgb(171, 36, 36);
+    cursor: pointer;
+}
+
+.submitButton:hover{
+    background-color: green;
 }
 .tenResults{
     margin-top: 20px;
@@ -130,6 +136,10 @@ table{
        border-radius: 15px;
        border: white 1px solid;
   }
+  #leftclicker:hover, #leftclicker1:hover, #rightclicker:hover, #rightclicker1:hover{
+      background-color: green;
+
+  }
 
   #rightclicker, #rightclicker1{
       right: 0px;
@@ -139,4 +149,6 @@ table{
        border: white 1px solid;
        border-radius: 15px;
   }
+
+
 
