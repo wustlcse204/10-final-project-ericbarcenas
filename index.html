@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Final Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body> 
@@ -49,7 +50,7 @@
 
         <div class="slideshow-container">
           <div class="myPages">
-            <table>
+            <table class= "mainTable">
               <tr>
                 <th>
                   <div class = "tenResults">
@@ -398,7 +399,7 @@
 
 
 
-            <table>
+            <table class="mainTable">
               <tr>
                 <th>
                   <div class = "tenResults">
@@ -834,8 +835,29 @@
           }
           
           
+    </script>
+
+    <script>
+      window.onload = function(){
+        $(".mainTable").hide();
+        $("#leftclicker").hide();
+        $("#rightclicker").hide();
+        $("#leftclicker1").hide();
+        $("#rightclicker1").hide();
+      }
+
+      $(document).ready(function(){
+        $(".submitButton").click(function(){
+          $(".mainTable").show();
+          $("#leftclicker").show();
+          $("#rightclicker").show();
+          $("#leftclicker1").show();
+          $("#rightclicker1").show();
+        });
+      });
 
     </script>
+      
 
 
 

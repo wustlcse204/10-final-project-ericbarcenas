@@ -26,7 +26,7 @@ header{
     font-size: 20px;
 }
 
-#inputItem, .submitButton{
+#inputItem, .submitButton, .nightMode{
     padding: 10px 10px 10px 10px;
 }
 .dropdown{
@@ -34,7 +34,7 @@ header{
     padding: 10px 10px 10px 10px;
 }
 
-.submitButton{
+.submitButton, .nightMode{
     background-color: rgb(171, 36, 36);
     cursor: pointer;
 }
@@ -89,8 +89,17 @@ table{
     background-color: white;
     color: black;
   }
+  .frontSideN {
+    background-color: white;
+    color: black;
+  }
   
   .backSide {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+  }
+  .backSideN {
     background-color: white;
     color: black;
     transform: rotateY(180deg);
