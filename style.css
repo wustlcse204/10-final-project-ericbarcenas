@@ -126,29 +126,43 @@ table{
   }
 
   #leftclicker, #leftclicker1{
-      margin-left: 2%;
-      margin-right: 93%;
-      /* padding: 15px 25px; */
-       /* font-size: 24px; */
+      margin-left: 7%;
+      margin-right: 80%;
        cursor: pointer;
-       color: #fff;
-       background-color: #999;
-       border-radius: 15px;
-       border: white 1px solid;
+       border: 1px solid #cdcdcd;
+       background: white;
+       border-radius: 25px;
+       overflow: hidden;
+       color: rgb(171, 36, 36);
+       height: 30px;
+       transition: width 0.2s ease-in-out;
   }
   #leftclicker:hover, #leftclicker1:hover, #rightclicker:hover, #rightclicker1:hover{
-      background-color: green;
+      /* background-color: green; */
+      width: 90px;
 
   }
+  #leftclicker:hover .buttonText, #leftclicker1:hover .buttonText, #rightclicker:hover .buttonText, #rightclicker1:hover .buttonText{
+    /* background-color: green; */
+    /* width: 90px; */
+    opacity: 1;
+    
+}
 
   #rightclicker, #rightclicker1{
-      right: 0px;
+      /* right: 0px; */
       cursor: pointer;
-       color: #fff;
-       background-color: #999;
-       border: white 1px solid;
-       border-radius: 15px;
+       border: 1px solid #cdcdcd;
+       background: white;
+       border-radius: 25px;
+       overflow: hidden;
+       color: rgb(171, 36, 36);
+       height: 30px;
+       transition: width 0.2s ease-in-out;
   }
-
+  .buttonText{
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
 
 
