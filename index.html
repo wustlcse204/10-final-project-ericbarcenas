@@ -770,6 +770,24 @@
 
 
     <script>
+        //JQuery to not have empty search results when page is initially loaded
+      window.onload = function(){
+        $(".mainTable").hide();
+        $("#leftclicker").hide();
+        $("#rightclicker").hide();
+        $("#leftclicker1").hide();
+        $("#rightclicker1").hide();
+      }
+
+      $(document).ready(function(){
+        $(".submitButton").click(function(){
+          $(".mainTable").show();
+          $("#leftclicker").show();
+          $("#rightclicker").show();
+          $("#leftclicker1").show();
+          $("#rightclicker1").show();
+        });
+      });
 
       //Main API Call
       function showEvents(){
@@ -848,32 +866,6 @@
           
           
     </script>
-
-    <script>
-      //JQuery to not have empty search results when page is initially loaded
-      window.onload = function(){
-        $(".mainTable").hide();
-        $("#leftclicker").hide();
-        $("#rightclicker").hide();
-        $("#leftclicker1").hide();
-        $("#rightclicker1").hide();
-      }
-
-      $(document).ready(function(){
-        $(".submitButton").click(function(){
-          $(".mainTable").show();
-          $("#leftclicker").show();
-          $("#rightclicker").show();
-          $("#leftclicker1").show();
-          $("#rightclicker1").show();
-        });
-      });
-
-    </script>
-      
-
-
-
   </body>
 </html>
 
