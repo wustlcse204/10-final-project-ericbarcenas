@@ -175,3 +175,13 @@ table{
   }
 
 
+  @font-face{
+    font-family: bodyFont;
+    src: url(SchoolTimes-KrdZ.ttf);
+}
+  .backSide{
+    font-family: bodyFont;
+    font-size: 16px;
+  
+  }
+
